@@ -8,18 +8,18 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import org.ahmaddudayef.kmmcompose.navigation.LocalNavigationComponent
-import org.ahmaddudayef.kmmcompose.navigation.Router
+import org.ahmaddudayef.kmmcompose.navigation.LocalNavigator
+import org.ahmaddudayef.kmmcompose.navigation.NavTarget
 
 @Composable
-fun Screen2() {
+fun Screen2(name: String) {
 
-    val navigationComponent = LocalNavigationComponent.current
+    val navigator = LocalNavigator.current
 
     Column {
         Button(
             onClick = {
-                navigationComponent.back()
+                navigator.back()
             }
         ) {
             Text("Back")
@@ -27,13 +27,15 @@ fun Screen2() {
 
         Spacer(Modifier.height(12.dp))
 
-        Text("Text screen 2")
+        Text("Text screen 2: $name")
 
         Spacer(Modifier.height(12.dp))
 
         Button(
             onClick = {
-                navigationComponent.navigate(Router.Screen3)
+                navigator.navigate(
+                    NavTarget.Screen3
+                )
             }
         ) {
             Text("Navigate to screen 3")

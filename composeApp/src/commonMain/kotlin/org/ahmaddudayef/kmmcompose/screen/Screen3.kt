@@ -8,16 +8,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import org.ahmaddudayef.kmmcompose.navigation.LocalNavigationComponent
+import org.ahmaddudayef.kmmcompose.navigation.LocalNavigator
 
 @Composable
 fun Screen3() {
-    val navigationComponent = LocalNavigationComponent.current
+    val navigator = LocalNavigator.current
 
     Column {
         Button(
             onClick = {
-                navigationComponent.back()
+                navigator.back()
             }
         ) {
             Text("Back")

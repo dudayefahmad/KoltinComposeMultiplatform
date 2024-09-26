@@ -17,6 +17,7 @@ kotlin = "2.0.20"
 ktor = "2.3.12"
 viewModel = "2.8.0"
 navigation = "2.7.0-alpha07"
+appyx = "2.0.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -38,7 +39,11 @@ ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotia
 ktor-client-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 jetbrain-viewModel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "viewModel" }
-jetbrain-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose" ,version.ref = "navigation"}
+jetbrain-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation" }
+appyx-navigation = { module = "com.bumble.appyx:appyx-navigation", version.ref = "appyx" }
+appyx-interaction = { module = "com.bumble.appyx:appyx-interactions", version.ref = "appyx" }
+appyx-backstack = { module = "com.bumble.appyx:backstack", version.ref = "appyx" }
+appyx-spotlight = { module = "com.bumble.appyx:spotlight", version.ref = "appyx" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -47,3 +52,4 @@ jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 koltinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlinAndroidParcelable = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
